@@ -1,15 +1,8 @@
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../app/store';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import bgImage from '../../../assets/bg-home.png';
 import './HomePage.css';
+import bgImage from '../../../assets/bg-home.png';
+import { motion } from 'framer-motion';
 
 function HomePageMobile() {
-  const user = useSelector((state: RootState) => state.user.currentUser);
-  const firstName = user?.nama?.split(' ')[0] || 'kamu';
-  const navigate = useNavigate();
-
   return (
     <div className="home-wrapper">
       <img src={bgImage} alt="background" className="home-bg-mobile" />
@@ -20,7 +13,7 @@ function HomePageMobile() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6, ease: 'easeOut' }}
         >
-          SR Agency
+          MERLIN
         </motion.h1>
 
         <motion.p
@@ -29,7 +22,16 @@ function HomePageMobile() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
         >
-          Work hard, party harder ✨
+          Under Maintenance ⚠️
+        </motion.p>
+
+        <motion.p
+          className="home-sub-subtitle"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
+        >
+          Fitur mobile sedang dalam pengembangan. Mohon bersabar!
         </motion.p>
       </div>
     </div>

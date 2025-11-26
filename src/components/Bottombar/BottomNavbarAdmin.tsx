@@ -65,21 +65,6 @@ function BottomNavbarAdmin() {
           <FiHome className={`nav-icon ${isActive('/') ? 'active' : ''}`} />
           <span>Home</span>
         </div>
-
-        <div className="nav-item" onClick={() => setActiveModal('transaksi')}>
-          <FiDollarSign className={`nav-icon ${activeModal === 'transaksi' ? 'active' : ''}`} />
-          <span>Transaksi</span>
-        </div>
-
-        <div className="nav-item" onClick={() => setActiveModal('report')}>
-          <FiBarChart2 className={`nav-icon ${activeModal === 'report' ? 'active' : ''}`} />
-          <span>Report</span>
-        </div>
-
-        <div className="nav-item" onClick={() => setActiveModal('menu')}>
-          <FiMenu className={`nav-icon ${activeModal === 'menu' ? 'active' : ''}`} />
-          <span>Menu</span>
-        </div>
       </div>
 
       {activeModal && ReactDOM.createPortal(renderModalContent(), document.body)}

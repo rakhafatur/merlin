@@ -6,7 +6,7 @@ import DataTable from '../../../components/DataTable';
 import UserCardList from '../components/UserCardList';
 import { useMediaQuery } from 'react-responsive';
 import { FiPlus, FiEdit2, FiTrash2 } from 'react-icons/fi';
-import './userlistpage.css';
+import './UserListPage.css';
 
 type User = {
   id: string;

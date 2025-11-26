@@ -1,0 +1,19 @@
+:root {
+  --color-green: #5cb85c;
+  --color-green-light: #d8f3dc;
+  --color-green-lighter: #f0fdf4;
+  --color-accent: #4B6043;
+
+  --color-bg: #f8f9fa;
+  --color-dark: #1a1a1a;
+  --color-white: #ffffff;
+
+  --font-base: 'Segoe UI', sans-serif;
+  --radius: 0.75rem;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  --color-warning: #fff3cd;
+  --color-warning-hover: #ffe8a1;
+  --color-danger: #f8d7da;
+  --color-danger-hover: #f5c2c7;
+}

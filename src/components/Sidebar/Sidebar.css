@@ -1,0 +1,143 @@
+.sidebar {
+  height: 100vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95); /* biru lembut + transparan */
+  backdrop-filter: blur(16px);
+  color: #0b3d91;
+  transition: all 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-right: 1px solid #a0e0ff; /* cyan aksen */
+}
+
+/* ==========================================
+   BACKDROP MOBILE
+========================================== */
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 64, 0.45); /* biru gelap transparan */
+  z-index: 999;
+}
+
+/* ==========================================
+   LOGO STYLE
+========================================== */
+.sidebar-logo {
+  max-width: 120px;
+  border-radius: 12px;
+  transition: max-width 0.3s;
+}
+
+.sidebar-logo.collapsed {
+  max-width: 48px;
+}
+
+/* ==========================================
+   SIDEBAR LINK
+========================================== */
+.sidebar-link,
+.sidebar .nav-link {
+  color: #1f2937 !important; /* netral gelap */
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Hover */
+.sidebar-link:hover {
+  background-color: rgba(255, 212, 127, 0.2); /* soft gold */
+  color: inherit !important; /* tulisan tetap netral */
+}
+
+/* Active */
+.sidebar-link.active {
+  background-color: rgba(255, 212, 127, 0.35); /* gold lebih jelas */
+  color: #b3863e !important; /* gold medium */
+  font-weight: 600;
+  border-left: 4px solid #ffd47f;
+  padding-left: 12px;
+}
+
+.sidebar-link.active .sidebar-icon {
+  color: #b3863e; /* icon ikut gold */
+} 
+
+.sidebar-icon {
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+/* ==========================================
+   CLOSE BUTTON (mobile)
+========================================== */
+.btn-close-mobile {
+  background: none;
+  color: #0b3d91;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* ==========================================
+   COLLAPSE BUTTON (custom accent)
+========================================== */
+.btn-outline-accent {
+  border-color: #ffd47f; /* gold */
+  color: #0f3caa;
+}
+
+.btn-outline-accent:hover {
+  background-color: #ffd47f;
+  color: #0b3d91;
+}
+
+/* ==========================================
+   MOBILE STYLING IMPROVEMENT
+========================================== */
+@media (max-width: 768px) {
+  .sidebar-link {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 18px;
+  }
+
+  .sidebar-link .sidebar-icon {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-link.active {
+    background-color: #ffd47f33; /* gold soft */
+    border-left: 4px solid #ffd47f;
+    padding-left: 16px;
+  }
+
+  .sidebar {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: rgba(0, 0, 64, 0.12) 4px 0 20px;
+  }
+
+  .sidebar-logo {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  .btn-close-mobile {
+    font-size: 1.8rem;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+  }
+}

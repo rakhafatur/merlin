@@ -1,0 +1,247 @@
+/* ✅ Import variabel tema dari file yang benar */
+@import './variable.css';
+
+/* ========= BASE RESET ========== */
+html, body, #root {
+  height: 100%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--color-bg);
+  color: var(--color-dark);
+  font-family: var(--font-base);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* ========= GLOBAL UTILITY ========== */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.px-3 { padding-left: 1rem; padding-right: 1rem; }
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow);
+}
+
+/* ========= TABLE SR CUSTOM ========== */
+.sr-table tr:hover {
+  background-color: var(--color-green-lighter);
+}
+
+.sr-table th,
+.sr-table td {
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+}
+
+.sr-table thead tr {
+  background-color: var(--color-green-light);
+}
+
+.sr-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+/* ========= FORM INPUT ========== */
+.form-input-sr {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.form-input-sr:focus {
+  outline: none;
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 0.15rem rgba(92, 184, 92, 0.25);
+}
+
+/* ========= SIDEBAR STYLE ========== */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  border-radius: var(--radius);
+  margin-bottom: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+/* ========= PAGE TITLE ========== */
+.page-title {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* ========= BUTTONS ========== */
+.button-outline {
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+  background-color: transparent;
+  border-radius: var(--radius);
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button-outline:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.button-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-primary:hover {
+  background-color: #3d4f39;
+}
+
+/* soft action buttons */
+.btn-soft-warning {
+  background-color: var(--color-warning);
+  color: var(--color-dark);
+  border-color: var(--color-warning-hover);
+}
+
+.btn-soft-warning:hover {
+  background-color: var(--color-warning-hover);
+  color: var(--color-dark);
+}
+
+.btn-soft-danger {
+  background-color: var(--color-danger);
+  color: var(--color-dark);
+  border-color: var(--color-danger-hover);
+}
+
+.btn-soft-danger:hover {
+  background-color: var(--color-danger-hover);
+  color: var(--color-dark);
+}
+
+/* ========= CARDS ========== */
+.card {
+  background-color: var(--color-white);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* ========= TEXT STYLES ========== */
+.text-muted {
+  color: #6c757d;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.sr-table th,
+.sr-table td {
+  border-bottom: 1.5px solid var(--color-green-light, #c9ecd8) !important;
+}
+
+/* Jika ingin ada grid penuh: */
+.sr-table th, .sr-table td {
+  border-right: 1px solid var(--color-green-light, #c9ecd8) !important;
+}
+.sr-table th:last-child, .sr-table td:last-child {
+  border-right: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-outline-green {
+    border: 2px solid var(--color-green);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background-color: #f9fff9;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.fab-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+  color: white;
+  font-size: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.fab-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+#addusermodal-merlin .modal-content {
+  border-radius: 12px !important;
+  border: none !important;
+  overflow: hidden;
+}
+
+#addusermodal-merlin .merlin-modal-body {
+  padding: 1rem 1.2rem;
+}
+
+#addusermodal-merlin .merlin-btn-primary {
+  background: var(--merlin-blue) !important;
+  border-color: var(--merlin-blue) !important;
+  color: white !important;
+}
+
+#addusermodal-merlin .merlin-btn-secondary {
+  background: white !important;
+  border-color: var(--merlin-blue) !important;
+  color: var(--merlin-blue) !important;
+}
+

@@ -1,0 +1,126 @@
+/* === GLOBAL WRAPPER === */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* === CONTAINER === */
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  background-color: #ffffffd0;
+  backdrop-filter: blur(8px);
+}
+
+/* === LEFT ILLUSTRATION === */
+.login-illustration {
+  flex: 1;
+  background-color: #dbeafe;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 2rem;
+}
+
+.login-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .login-illustration {
+    display: none;
+  }
+}
+
+/* === FORM WRAPPER === */
+.login-form-wrapper {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === CARD === */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  color: #1e3a8a;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #ffffffd0;
+}
+
+/* === INPUTS === */
+.login-card input {
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  color: #1e3a8a;
+  border: 1px solid #93c5fd;
+}
+
+.login-card input:focus {
+  box-shadow: 0 0 4px #60a5fa;
+  border-color: #3b82f6;
+}
+
+/* === LOGO === */
+.login-card .login-logo {
+  max-height: 80px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .login-card .login-logo {
+    max-height: 64px;
+  }
+}
+
+/* === BUTTON === */
+.btn-gold {
+  background-color: #1e3a8a; /* biru gelap */
+  color: white;
+  border: 2px solid #ffd47f; /* tipis gold border */
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #3b82f6; /* hover tetap biru tapi lebih terang */
+  color: white;
+  border-color: #ffd47f; /* gold border tetap tipis */
+}
+
+/* === LINKS === */
+.text-gold {
+  color: #ffd47f;
+  text-decoration: none;
+}
+
+.text-gold:hover {
+  text-decoration: underline;
+}
+
+/* === MERLIN TITLE === */
+.brand {
+  color: #ffd47f; /* gold hanya untuk MERLIN */
+  font-weight: 600;
+}
+
+/* === EYE TOGGLE === */
+.eye-toggle {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

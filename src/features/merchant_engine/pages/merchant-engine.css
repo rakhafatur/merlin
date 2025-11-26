@@ -1,0 +1,23 @@
+:root {
+  --color-bg: #f0f4f8;
+  --color-blue: #1d4ed8;
+  --color-blue-light: #e0efff;
+  --color-gold: #ffd700;
+  --color-white: #ffffff;
+  --color-dark: #1e293b;
+  --color-green-light: #d9f99d;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+table tr:hover {
+  background-color: rgba(255, 215, 0, 0.15);
+}
+
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+  min-width: 5%;
+}

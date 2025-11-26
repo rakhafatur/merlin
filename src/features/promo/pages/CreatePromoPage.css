@@ -1,0 +1,344 @@
+/* --- ROOT COLORS --- */
+:root {
+  --color-bg: #f0f4f8;
+  --color-blue: #1d4ed8;
+  --color-blue-light: #e0efff;
+  --color-gold: #ffd700;
+  --color-white: #ffffff;
+  --color-dark: #1e293b;
+  --color-dark-light: #475569;
+  --color-green-light: #d9f99d;
+}
+
+/* --- PAGE WRAPPER --- */
+.cpp-page-wrapper {
+  width: 100%;
+  padding: 24px 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* --- HEADER --- */
+.cpp-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.cpp-header p {
+  font-size: 14px;
+  color: var(--color-dark-light);
+  margin-bottom: 24px;
+}
+
+/* --- MERCHANT GRID --- */
+.cpp-merchants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.cpp-merchant-card {
+  border: 1px solid rgba(74,144,226,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  background-color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.cpp-merchant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(10,30,60,0.06);
+}
+
+.cpp-merchant-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+}
+
+.cpp-merchant-info {
+  font-size: 13px;
+  color: var(--color-dark-light);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* --- CREATE PROMO FORM --- */
+.cpp-create-promo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-white);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cpp-create-promo-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+.cpp-create-promo-form input[type='number'],
+.cpp-create-promo-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(74,144,226,0.2);
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--color-dark);
+  background: var(--color-white);
+  transition: all 0.2s;
+}
+
+.cpp-create-promo-form input[type='number']:focus,
+.cpp-create-promo-form select:focus {
+  border-color: var(--color-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74,144,226,0.15);
+}
+
+/* --- SEGMENTS --- */
+.cpp-segments {
+  display: flex;
+  flex-direction: column; /* judul di atas */
+  gap: 8px;
+}
+
+.cpp-segments-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+
+.cpp-segments-list {
+  display: flex;
+  flex-wrap: wrap; /* biar banyak checkbox lanjut baris baru */
+  gap: 12px;       /* jarak antar checkbox */
+}
+
+.cpp-segments-list label {
+  display: inline-flex;       /* inline-flex supaya teks di samping checkbox */
+  align-items: center;        /* vertikal center */
+  gap: 6px;                   /* jarak checkbox ke teks */
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-dark-light);
+  cursor: pointer;
+  margin: 0;
+}
+
+.cpp-segments-list input[type="checkbox"] {
+  margin: 0; /* hilangkan margin default browser */
+}
+
+/* --- IMPACT --- */
+.cpp-impact {
+  font-size: 14px;
+  color: var(--color-dark);
+}
+
+/* --- SUBMIT BUTTON --- */
+.cpp-submit {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4A90E2, #3B7CD6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cpp-submit:hover {
+  background-color: #357abd;
+  box-shadow: 0 6px 18px rgba(59,124,214,0.18);
+}
+
+/* --- LOADING & NO DATA --- */
+.cpp-loading,
+.cpp-no-merchants {
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-dark-light);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .cpp-merchants-grid,
+  .cpp-create-promo-form {
+    flex: 1 1 100%;
+  }
+}
+
+/* Promo Summary */
+.cpp-promo-summary {
+  margin-top: 32px;
+  background: var(--color-white);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cpp-promo-summary h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-dark);
+}
+
+.cpp-promo-summary p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-dark);
+}
+
+.cpp-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* card minimal 300px */
+  gap: 16px;
+}
+
+.cpp-summary-card {
+  background: var(--color-blue-light);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(74,144,226,0.2);
+  transition: all 0.2s;
+  min-width: 300px; /* card lebih lega */
+  overflow-x: auto; /* supaya table scroll kalau lebar card kecil */
+}
+
+.cpp-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(10,30,60,0.08);
+}
+
+.cpp-summary-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+
+.cpp-summary-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cpp-summary-card li {
+  font-size: 13px;
+  color: var(--color-dark-light);
+  margin-bottom: 4px;
+}
+
+/* Wrapping table supaya scroll kalau kebanyakan kolom */
+.cpp-segment-table-wrapper {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  overflow-x: auto; /* scroll horizontal */
+}
+
+.cpp-customer-table {
+  width: 100%;
+  min-width: 500px; /* supaya kolom ga nge-compress */
+  border-collapse: collapse;
+}
+
+/* Header */
+.cpp-customer-table th {
+  position: sticky;
+  top: 0;
+  background-color: #e0efff;
+  z-index: 1;
+}
+
+/* Cell */
+.cpp-customer-table td {
+  border: 1px solid #cbd5e1;
+  padding: 10px 12px;
+  font-size: 13px;
+  white-space: nowrap; /* supaya data ga pecah ke baris */
+}
+
+/* Row striping */
+.cpp-customer-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.cpp-customer-table tbody tr:hover {
+  background-color: #dbeafe;
+}
+
+.cpp-segment-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.cpp-segment-input-wrapper input[type="number"] {
+  width: 100px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(74,144,226,0.2);
+  font-size: 13px;
+}
+
+/* Pagination */
+.cpp-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.cpp-pagination button {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cpp-pagination button:hover:not(:disabled) {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.cpp-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cpp-pagination span {
+  font-size: 12px;
+  color: var(--color-dark-light);
+  min-width: 60px;
+  text-align: center;
+}
+
+.cpp-submit {
+  width: 100%;
+}
